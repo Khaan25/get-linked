@@ -10,7 +10,36 @@ const config: Config = {
     extend: {
       fontFamily: {
         montserrat: ['var(--font-montserrat)', ...fontFamily.sans],
+        'unica-one': ['var(--font-unica-one)', 'serif'],
         clash: ['var(--font-clash)', 'serif'],
+      },
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+
+        max3xl: { max: '1400px' },
+        maxXl: { max: '1280px' },
+        maxLg: { max: '1024px' },
+        max968: { max: '968px' },
+        maxMd: { max: '767px' },
+        maxSm: { max: '639px' },
+        max568: { max: '568px' },
+        max468: { max: '468px' },
+        max400: { max: '400px' },
+        // => @media (max-width: 340px) { ... }
+        max360: { max: '360px' },
+
+        min340: '340px',
+        // => @media (min-width: 340px) { ... }
+        min360: '360px',
+        min400: '400px',
+        min469: '469px',
+        min568: '568px',
+        min968: '968px',
+        xl: '1280px',
+        '2xl': '1350px',
+        '3xl': '1400px',
       },
       colors: {
         border: 'hsl(var(--border))',
@@ -25,6 +54,10 @@ const config: Config = {
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))',
+        },
+        tertiary: {
+          DEFAULT: 'hsl(var(--tertiary))',
+          foreground: 'hsl(var(--tertiary-foreground))',
         },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
