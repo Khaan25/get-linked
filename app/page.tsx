@@ -1,3 +1,4 @@
+import Criteria from '@/components/home/criteria'
 import Hero from '@/components/home/hero'
 import Introduction from '@/components/home/introduction'
 import Rules from '@/components/home/rules'
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Introduction />
       <Rules />
+      <Criteria />
     </>
   )
 }
