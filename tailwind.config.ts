@@ -5,11 +5,12 @@ import { fontFamily } from 'tailwindcss/defaultTheme'
 const config: Config = {
   darkMode: ['class'],
   content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './app/**/*.{ts,tsx}', './src/**/*.{ts,tsx}'],
+  corePlugins: { container: false },
   theme: {
     extend: {
       fontFamily: {
-        inter: ['var(--font-inter)', ...fontFamily.sans],
-        'roboto-slab': ['var(--font-roboto-slab)', 'serif'],
+        montserrat: ['var(--font-montserrat)', ...fontFamily.sans],
+        clash: ['var(--font-clash)', 'serif'],
       },
       colors: {
         border: 'hsl(var(--border))',
