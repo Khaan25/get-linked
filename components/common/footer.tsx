@@ -8,7 +8,7 @@ export default function Footer() {
   const links = ['Overview', 'Timeline', 'FAQs', 'Register']
 
   return (
-    <footer className="bg-[#100B20] pb-8 pt-16">
+    <footer className="paddingX bg-[#100B20] pb-8 pt-16">
       <div className="container">
         <div className="grid items-start justify-between gap-16 min968:grid-cols-[.6fr,.4fr]">
           <div className="flex flex-col gap-4 maxSm:mt-6 min968:max-w-lg">
@@ -33,7 +33,7 @@ export default function Footer() {
                 ))}
 
                 <li className="flex items-center gap-4">
-                  <span className="font-semibold text-primary">Follow Us</span>
+                  <span className="whitespace-nowrap font-semibold text-primary">Follow Us</span>
                   <div className="flex items-center gap-4">
                     <Link href="/" target="_blank">
                       <Icons.instagram />
@@ -74,7 +74,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="-mt-7 mb-12 flex items-center justify-between gap-4">
+        <div className="mb-12 mt-4 flex items-center justify-between gap-4 min968:-mt-7">
           <div className="flex items-center gap-2">
             <Link href="/" className="hover:underline hover:underline-offset-4">
               Terms of Use
@@ -87,7 +87,7 @@ export default function Footer() {
         </div>
 
         <div className="flex items-center justify-start min968:justify-center">
-          <span className="block text-xs maxSm:text-center">ZiaCodes &nbsp; All rights reserved. © getlinked Ltd.</span>
+          <span className="block text-xs maxSm:text-center">ZiaCodes All rights reserved. © getlinked Ltd.</span>
         </div>
       </div>
     </footer>
