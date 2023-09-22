@@ -8,10 +8,9 @@ type TimelineListCardProps = {
   position: 'left' | 'right'
   timeline: Timeline
   index: number
-  isLastTimeLine: boolean
 }
 
-export default function TimelineListCard({ position, index, timeline, isLastTimeLine }: TimelineListCardProps) {
+export default function TimelineListCard({ position, index, timeline }: TimelineListCardProps) {
   const isLeft = position === 'left'
 
   return (
@@ -23,7 +22,7 @@ export default function TimelineListCard({ position, index, timeline, isLastTime
           </Heading>
           <Description className="text-sm font-normal min568:text-base">{timeline.description}</Description>
           <div className={cn('absolute -left-3.5 !-mt-[.75rem] md:top-4 maxMd:bg-background maxMd:pb-8 maxMd:pt-2', isLeft ? 'md:right-[-6.2rem]' : 'md:left-[-6.2rem]')}>
-            <div className={cn('inline-flex w-fit bg-background py-2 font-bold tabular-nums', isLastTimeLine && 'md:pb-[14.3rem] min968:pb-52')}>
+            <div className="inline-flex w-fit bg-background py-2 font-bold tabular-nums">
               <div className="rounded-full bg-gradient-to-r from-purple-900 via-purple-600 to-purple-300 px-2 py-0.5 md:px-3 md:py-1 md:text-lg">{index + 1}</div>
             </div>
           </div>
