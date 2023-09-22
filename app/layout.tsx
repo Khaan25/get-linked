@@ -10,7 +10,7 @@ import type { Metadata } from 'next'
 
 import { defaultMetadata } from '@/lib/default-metadata'
 import { fontClash, fontMontserrat, fontUnicaOne } from '@/lib/font'
-import Footy from '@/components/common/footy'
+import Footer from '@/components/common/footer'
 import Header from '@/components/common/header'
 import SkipToMain from '@/components/common/skip-to-main'
 
@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <SkipToMain content={skipToContentID} />
         <Header />
         <main id={skipToContentID}>{children}</main>
-        <Footy />
+        <Footer />
         <Toaster />
       </body>
     </html>
