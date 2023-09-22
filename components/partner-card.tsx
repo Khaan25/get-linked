@@ -16,7 +16,7 @@ export default function PartnerCard({ partner, index }: { partner: string; index
         index === 6 && 'border-l-4'
       )}
     >
-      <Image className="min-h-[50px] md:min-h-[130px] w-[130px] object-contain" src={partner} width={130} height={130} alt="Partner" />
+      <Image className="min-h-[50px] w-[130px] object-contain md:min-h-[130px]" src={partner} width={130} height={130} alt="Partner" />
     </article>
   )
 }

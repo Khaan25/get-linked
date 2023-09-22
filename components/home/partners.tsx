@@ -22,7 +22,7 @@ export default function Partners() {
         </div>
 
         <div className="mt-16 w-full rounded-md border border-secondary">
-          <div className="mx-auto grid max-w-3xl place-items-center p-4 md:p-20 grid-cols-3">
+          <div className="mx-auto grid max-w-3xl grid-cols-3 place-items-center p-4 md:p-20">
             {partner.map((partner, index) => (
               <PartnerCard key={index} index={index + 1} partner={partner} />
             ))}

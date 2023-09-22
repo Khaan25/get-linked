@@ -5,14 +5,14 @@ import { cn } from '@/lib/utils'
 
 import './globals.css'
 
-import type { Metadata } from 'next'
 import { ReactNode } from 'react'
+import type { Metadata } from 'next'
 
+import { defaultMetadata } from '@/lib/default-metadata'
+import { fontClash, fontMontserrat, fontUnicaOne } from '@/lib/font'
 import Footy from '@/components/common/footy'
 import Header from '@/components/common/header'
 import SkipToMain from '@/components/common/skip-to-main'
-import { defaultMetadata } from '@/lib/default-metadata'
-import { fontClash, fontMontserrat, fontUnicaOne } from '@/lib/font'
 
 export const metadata: Metadata = {
   ...defaultMetadata,
