@@ -17,7 +17,7 @@ const ExpiredNotice = () => {
 
 const ShowCounter = ({ hours, minutes, seconds }: { hours: number; minutes: number; seconds: number }) => {
   return (
-    <div className="!mt-20 flex items-center gap-6 maxMd:justify-center">
+    <div className="flex items-center gap-6 md:!mt-20 maxMd:justify-center">
       <DateTimeDisplay value={hours} type="Hours" />
       <DateTimeDisplay value={minutes} type="Minutes" />
       <DateTimeDisplay value={seconds} type="Seconds" />

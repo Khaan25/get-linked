@@ -27,7 +27,7 @@ export default function Rules() {
         </div>
 
         <picture>
-          <Image className="mx-auto maxLg:max-w-[400px]" src="/imgs/rules-image.png" alt="Person sitting on chair" width={800} height={800} />
+          <Image src="/imgs/rules-image.png" alt="Person sitting on chair" width={800} height={800} />
         </picture>
       </div>
     </Section>

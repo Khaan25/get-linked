@@ -39,13 +39,13 @@ export default function Navigation() {
             variants={menuVariant}
             initial="hidden"
             animate={isLargeDevice ? 'show' : isOpen ? 'show' : 'hidden'}
-            className="relative md:flex md:gap-x-4 maxMd:fixed maxMd:left-0 maxMd:top-0 maxMd:z-50 maxMd:flex maxMd:h-screen maxMd:w-full maxMd:flex-col maxMd:items-start maxMd:gap-4 maxMd:bg-background maxMd:p-12 maxMd:pt-32 maxMd:shadow-[0_-1px_4px_rgba(14,55,63,.15)]"
+            className="relative md:flex md:gap-x-4 maxMd:fixed maxMd:left-0 maxMd:top-0 maxMd:flex maxMd:h-screen maxMd:w-full maxMd:flex-col maxMd:items-start maxMd:gap-4 maxMd:bg-background maxMd:p-12 maxMd:pt-32 maxMd:shadow-[0_-1px_4px_rgba(14,55,63,.15)]"
           >
             <button aria-label="Close Menu" onClick={closeMenu} className="absolute right-[1rem] top-[1.4rem] md:hidden">
               <Icons.close />
             </button>
 
-            <ul className="flex w-full gap-4 md:items-center md:gap-8 md:!px-0 maxMd:flex-col min360:px-12">
+            <ul className="flex w-full gap-4 md:items-center md:gap-8 maxMd:flex-col">
               {menu.map((m) => (
                 <li key={m.title}>
                   <Link onClick={closeMenu} href={m.href} className="hover:text-white/80">

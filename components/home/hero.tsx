@@ -18,7 +18,7 @@ export default function Hero() {
         <Heading
           level={2}
           defaultFont
-          className="absolute -top-12 left-1/2 z-50 flex w-fit -translate-x-1/2 -translate-y-1/2 items-center gap-1 whitespace-nowrap text-center text-base italic md:-top-20 md:left-[78%] md:gap-2 lg:text-3xl"
+          className="absolute -top-8 left-1/2 z-50 flex w-fit -translate-x-1/2 -translate-y-1/2 items-center gap-1 whitespace-nowrap text-center text-base italic md:-top-20 md:left-[78%] md:gap-2 lg:text-3xl"
         >
           Igniting a Revolution in HR <Underline>Innovation</Underline>
         </Heading>
@@ -27,7 +27,7 @@ export default function Hero() {
         <Star dim className="right-20 top-60" />
 
         {/* Content */}
-        <div className="mx-auto max-w-[530px] space-y-8 maxLg:text-left">
+        <div className="space-y-8 maxLg:text-center maxMd:mt-4">
           <Heading level={1} className="relative z-50 -mb-6 font-semibold md:text-6xl xl:whitespace-nowrap xl:text-7xl">
             getlinked Tech <br /> Hackathon{' '}
             <div className="inline-flex flex-wrap items-center justify-center gap-1">
