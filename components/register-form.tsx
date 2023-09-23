@@ -31,7 +31,9 @@ const FormSchema = z.object({
   topic: z.string().min(1, { message: 'topic must be selected' }),
   category: z.string({ required_error: 'Category must be selected' }),
   group_size: z.string({ required_error: 'Group Size must be selected' }),
-  policy: z.boolean(),
+  policy: z.boolean().refine((value) => value === true, {
+    message: 'Policy must be checked',
+  }),
 })
 
 export default function RegisterForm() {
@@ -150,7 +152,7 @@ export default function RegisterForm() {
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormLabel>Category</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <Select disabled={isLoading} onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger>
                       <SelectValue className="w-full" placeholder="Select your Category" />
@@ -175,7 +177,7 @@ export default function RegisterForm() {
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormLabel>Group Size</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <Select disabled={isLoading} onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger>
                       <SelectValue placeholder="Select your Group Size" />
@@ -203,7 +205,10 @@ export default function RegisterForm() {
                 <FormControl>
                   <Checkbox checked={field.value} onCheckedChange={field.onChange} />
                 </FormControl>
-                <FormLabel className="!m-0">I agreed with the event terms and conditions and privacy policy</FormLabel>
+                <div className="m-0 flex flex-col gap-2">
+                  <FormLabel className="!m-0">I agreed with the event terms and conditions and privacy policy</FormLabel>
+                  <FormMessage />
+                </div>
               </FormItem>
             )}
           />
