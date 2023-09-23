@@ -1,15 +1,27 @@
+'use client'
+
 import Link from 'next/link'
 
+import useIsPage from '@/hooks/useIsPage'
+
+import Star from '../elements/star'
 import { Description } from '../ui/description'
 import { Heading } from '../ui/heading'
 import { Icons } from './icons'
 
 export default function Footer() {
   const links = ['Overview', 'Timeline', 'FAQs', 'Register']
+  const isPage = useIsPage()
+
+  if (isPage) return null
 
   return (
     <footer className="paddingX bg-[#100B20] pb-8 pt-16">
-      <div className="container">
+      <div className="container relative">
+        <Star className="right-8 top-0 lg:-left-32 lg:top-32" />
+        <Star colored className="right-8 top-0 lg:bottom-4 lg:left-1/2" />
+        <Star dim className="right-8 top-0 lg:-right-32 lg:top-32" />
+
         <div className="grid items-start justify-between gap-16 min968:grid-cols-[.6fr,.4fr]">
           <div className="flex flex-col gap-4 maxSm:mt-6 min968:max-w-lg">
             <Link href="/" className="block">
@@ -25,8 +37,8 @@ export default function Footer() {
               </Heading>
               <ul className="space-y-4" aria-label="Links Links">
                 {links.map((link, index) => (
-                  <li>
-                    <Link key={index} target="_self" className="inline-block text-base font-normal underline-offset-4 hover:underline max360:text-sm" href="/">
+                  <li key={index}>
+                    <Link target="_self" className="inline-block text-base font-normal underline-offset-4 hover:underline max360:text-sm" href="/">
                       {link}
                     </Link>
                   </li>

@@ -1,6 +1,14 @@
+'use client'
+
+import useIsPage from '@/hooks/useIsPage'
+
 import Navigation from './navigation'
 
 export default function Header() {
+  const isPage = useIsPage()
+
+  if (isPage) return null
+
   return (
     <header aria-label="Header" className="paddingX relative z-[100] border-b border-border/20 py-4 md:py-6">
       <div className="container">

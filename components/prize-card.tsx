@@ -26,7 +26,7 @@ export default function PrizeCard({ prize: { icon, title, price }, index }: Priz
         width={500}
         height={500}
       />
-      <div className={cn('mt-4 flex flex-col px-4 py-6 lg:gap-2', index === 2 && 'mt-8 xl:mt-20')}>
+      <div className={cn('mt-4 flex flex-col px-2 py-6 lg:gap-2 min568:px-4', index === 2 && 'mt-8 xl:mt-20')}>
         <Heading className="text-lg font-bold md:text-4xl lg:mt-10" level={2}>
           {title}
         </Heading>

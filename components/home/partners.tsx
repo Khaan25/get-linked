@@ -12,7 +12,7 @@ export default function Partners() {
       <div className="container relative">
         <div className="absolute left-0 top-0 z-[-1] aspect-square w-[200px] rounded-full bg-secondary blur-[60px] lg:-left-24 lg:-top-24 lg:w-[350px] lg:opacity-50" />
         <div className="absolute -right-8 bottom-80 z-[-1] aspect-square w-[200px] rounded-full bg-secondary opacity-50 blur-[60px] lg:-bottom-24 lg:-right-24 lg:w-[350px]" />
-        <Star className="right-8 top-4 lg:left-4 lg:top-20" />
+        <Star className="left-8 top-4 lg:left-4 lg:top-20" />
         <Star className="bottom-0 right-8 lg:-bottom-8 lg:left-1/2" />
         <Star colored className="right-8 top-0 lg:bottom-8 lg:left-[80%]" />
 

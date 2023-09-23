@@ -26,7 +26,7 @@ export default function Prize() {
 
         <div className="grid items-center gap-28 md:gap-40 lg:grid-cols-2 lg:gap-12 xl:items-end">
           <picture>
-            <Image className="mx-auto max-w-[500px]" src="/imgs/prize.png" alt="trophie" width={800} height={800} />
+            <Image src="/imgs/prize.png" alt="trophy" width={800} height={800} />
           </picture>
 
           <PrizeContent />
