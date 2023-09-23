@@ -77,13 +77,15 @@ export default function ContactForm() {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Textarea placeholder="Tell us a little bit about yourself" className="resize-none" {...field} />
+                <Textarea rows={6} placeholder="Tell us a little bit about yourself" className="resize-none" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit" className="mx-auto flex">
+          Submit
+        </Button>
       </form>
     </Form>
   )
