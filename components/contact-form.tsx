@@ -55,6 +55,7 @@ export default function ContactForm() {
 
       if (response.ok) {
         toast.success('Success')
+        form.reset()
       } else {
         toast.error('There was an error while submitting')
       }
