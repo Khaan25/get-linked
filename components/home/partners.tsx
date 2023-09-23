@@ -3,6 +3,7 @@ import { partner } from '@/constant/partner'
 import { Section } from '../common/section'
 import Star from '../elements/star'
 import PartnerCard from '../partner-card'
+import { Slide } from '../Slide'
 import { Description } from '../ui/description'
 import { Heading } from '../ui/heading'
 
@@ -16,18 +17,22 @@ export default function Partners() {
         <Star className="bottom-0 right-8 lg:-bottom-8 lg:left-1/2" />
         <Star colored className="right-8 top-0 lg:bottom-8 lg:left-[80%]" />
 
-        <div className="mx-auto max-w-[500px] text-center">
-          <Heading level={2}>Partners and Sponsors</Heading>
-          <Description>Getlinked Hackathon 1.0 is honored to have the following major companies as its partners and sponsors</Description>
-        </div>
-
-        <div className="mt-16 w-full rounded-md border border-secondary">
-          <div className="mx-auto grid max-w-3xl grid-cols-3 place-items-center p-4 md:p-20">
-            {partner.map((partner, index) => (
-              <PartnerCard key={index} index={index + 1} partner={partner} />
-            ))}
+        <Slide>
+          <div className="mx-auto max-w-[500px] text-center">
+            <Heading level={2}>Partners and Sponsors</Heading>
+            <Description>Getlinked Hackathon 1.0 is honored to have the following major companies as its partners and sponsors</Description>
           </div>
-        </div>
+        </Slide>
+
+        <Slide delay={0.25}>
+          <div className="mt-16 w-full rounded-md border border-secondary">
+            <div className="mx-auto grid max-w-3xl grid-cols-3 place-items-center p-4 md:p-20">
+              {partner.map((partner, index) => (
+                <PartnerCard key={index} index={index + 1} partner={partner} />
+              ))}
+            </div>
+          </div>
+        </Slide>
       </div>
     </Section>
   )

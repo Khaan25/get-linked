@@ -8,7 +8,7 @@ import { Heading } from '../ui/heading'
 
 export default function Timeline() {
   return (
-    <Section>
+    <Section id="timeline">
       <div className="container relative">
         <Star dim className="right-8 top-96 lg:right-72 lg:top-1/2" />
         <Star className="bottom-0 left-8 lg:bottom-32 lg:left-32" />

@@ -46,13 +46,21 @@ export default function Navigation() {
             </button>
 
             <ul className="flex w-full gap-4 md:items-center md:gap-8 maxMd:flex-col">
-              {menu.map((m) => (
-                <li key={m.title}>
-                  <Link onClick={closeMenu} href={m.href} className="hover:text-white/80">
-                    {m.title}
-                  </Link>
-                </li>
-              ))}
+              {menu.map((m) =>
+                m.href.includes('#') ? (
+                  <li key={m.title}>
+                    <a onClick={closeMenu} href={m.href} className="hover:text-white/80">
+                      {m.title}
+                    </a>
+                  </li>
+                ) : (
+                  <li key={m.title}>
+                    <Link onClick={closeMenu} href={m.href} className="hover:text-white/80">
+                      {m.title}
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
 
             <Link href="/register" className="whitespace-nowrap md:hidden maxMd:order-1">

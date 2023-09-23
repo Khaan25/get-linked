@@ -1,14 +1,14 @@
 export const menu = [
   {
-    href: '#',
+    href: '/#timeline',
     title: 'Timeline',
   },
   {
-    href: '#',
+    href: '/#overview',
     title: 'Overview',
   },
   {
-    href: '#',
+    href: '/#faqs',
     title: 'FAQs',
   },
   {

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Section } from '../common/section'
 import Star from '../elements/star'
 import PrizeContent from '../prize-content'
+import { Slide } from '../Slide'
 import { Description } from '../ui/description'
 import { Heading } from '../ui/heading'
 
@@ -16,21 +17,25 @@ export default function Prize() {
         <Star className="bottom-0 right-8 lg:-bottom-8 lg:left-1/2" />
         <Star colored className="right-8 top-0 lg:bottom-8 lg:left-[80%]" />
 
-        <div className="text-center lg:ml-auto lg:w-[500px] lg:text-left">
-          <Heading level={2}>
-            Prizes and
-            <br /> <span className="text-primary">Rewards</span>
-          </Heading>
-          <Description>Highlight of the prizes or rewards for winners and for participants.</Description>
-        </div>
+        <Slide>
+          <div className="text-center lg:ml-auto lg:w-[500px] lg:text-left">
+            <Heading level={2}>
+              Prizes and
+              <br /> <span className="text-primary">Rewards</span>
+            </Heading>
+            <Description>Highlight of the prizes or rewards for winners and for participants.</Description>
+          </div>
+        </Slide>
 
-        <div className="grid items-center gap-28 md:gap-40 lg:grid-cols-2 lg:gap-12 xl:items-end">
-          <picture>
-            <Image src="/imgs/prize.png" alt="trophy" width={800} height={800} />
-          </picture>
+        <Slide delay={0.25}>
+          <div className="grid items-center gap-28 md:gap-40 lg:grid-cols-2 lg:gap-12 xl:items-end">
+            <picture>
+              <Image src="/imgs/prize.png" alt="trophy" width={800} height={800} />
+            </picture>
 
-          <PrizeContent />
-        </div>
+            <PrizeContent />
+          </div>
+        </Slide>
       </div>
     </Section>
   )

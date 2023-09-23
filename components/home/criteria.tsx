@@ -3,6 +3,7 @@ import { criteria } from '@/constant/criteria'
 
 import { Section } from '../common/section'
 import Star from '../elements/star'
+import { Slide } from '../Slide'
 import { Description } from '../ui/description'
 import { Heading } from '../ui/heading'
 
@@ -16,24 +17,28 @@ export default function Criteria() {
         <Star dim className="right-8 top-96 lg:left-72 lg:top-32" />
         <Star className="bottom-0 left-8 lg:bottom-32 lg:left-1/2" />
 
-        <div className="order-2 space-y-4 maxLg:text-center">
-          <Heading level={2}>
-            Judging Criteria
-            <br /> <span className="text-primary">Key attributes</span>
-          </Heading>
-          <div className="space-y-4">
-            {criteria.map((c, i) => (
-              <Description key={i}>
-                <span className="text-lg font-semibold text-tertiary">{c.title}: </span>
-                {c.description}
-              </Description>
-            ))}
+        <Slide>
+          <div className="order-2 space-y-4 maxLg:text-center">
+            <Heading level={2}>
+              Judging Criteria
+              <br /> <span className="text-primary">Key attributes</span>
+            </Heading>
+            <div className="space-y-4">
+              {criteria.map((c, i) => (
+                <Description key={i}>
+                  <span className="text-lg font-semibold text-tertiary">{c.title}: </span>
+                  {c.description}
+                </Description>
+              ))}
+            </div>
           </div>
-        </div>
+        </Slide>
 
-        <picture>
-          <Image src="/imgs/criteria.png" alt="2 persons thinking" width={800} height={800} />
-        </picture>
+        <Slide delay={0.25}>
+          <picture>
+            <Image src="/imgs/criteria.png" alt="2 persons thinking" width={800} height={800} />
+          </picture>
+        </Slide>
       </div>
     </Section>
   )
