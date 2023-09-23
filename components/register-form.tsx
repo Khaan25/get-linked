@@ -25,7 +25,7 @@ const FormSchema = z.object({
         const phonePattern = /^[0-9()-]*$/
         return phonePattern.test(value)
       },
-      { message: 'Invalid phone number format' }
+      { message: 'Invalid format, only number' }
     ),
   email: z.string().email({ message: 'Invalid email address.' }),
   topic: z.string().min(1, { message: 'topic must be selected' }),
@@ -205,7 +205,7 @@ export default function RegisterForm() {
                 <FormControl>
                   <Checkbox checked={field.value} onCheckedChange={field.onChange} />
                 </FormControl>
-                <div className="m-0 flex flex-col gap-2">
+                <div className="!m-0 flex flex-col gap-2">
                   <FormLabel className="!m-0">I agreed with the event terms and conditions and privacy policy</FormLabel>
                   <FormMessage />
                 </div>

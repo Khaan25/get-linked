@@ -10,7 +10,24 @@ import { Heading } from '../ui/heading'
 import { Icons } from './icons'
 
 export default function Footer() {
-  const links = ['Overview', 'Timeline', 'FAQs', 'Register']
+  const links = [
+    {
+      href: '/#overview',
+      title: 'Overview',
+    },
+    {
+      href: '/#timeline',
+      title: 'Timeline',
+    },
+    {
+      href: '/#faqs',
+      title: 'FAQs',
+    },
+    {
+      href: '/register',
+      title: 'Register',
+    },
+  ]
   const isPage = useIsPage()
 
   if (isPage) return null
@@ -38,8 +55,8 @@ export default function Footer() {
               <ul className="space-y-4" aria-label="Links Links">
                 {links.map((link, index) => (
                   <li key={index}>
-                    <Link target="_self" className="inline-block text-base font-normal underline-offset-4 hover:underline max360:text-sm" href="/">
-                      {link}
+                    <Link href={link.href} target="_self" className="inline-block text-base font-normal underline-offset-4 hover:underline max360:text-sm">
+                      {link.title}
                     </Link>
                   </li>
                 ))}

@@ -17,8 +17,8 @@ export default function Criteria() {
         <Star dim className="right-8 top-96 lg:left-72 lg:top-32" />
         <Star className="bottom-0 left-8 lg:bottom-32 lg:left-1/2" />
 
-        <Slide>
-          <div className="order-2 space-y-4 maxLg:text-center">
+        <Slide className="order-2">
+          <div className="space-y-4 maxLg:text-center">
             <Heading level={2}>
               Judging Criteria
               <br /> <span className="text-primary">Key attributes</span>

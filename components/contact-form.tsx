@@ -14,16 +14,19 @@ import { Textarea } from './ui/textarea'
 const FormSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
   email: z.string().email({ message: 'Invalid email address.' }),
-  number: z.string().refine(
-    (value) => {
-      // You can adjust the regex pattern as per your requirements for phone number validation
-      const phonePattern = /^[0-9()-]*$/
-      return phonePattern.test(value)
-    },
-    {
-      message: 'Invalid phone number format',
-    }
-  ),
+  number: z
+    .string()
+    .min(1, { message: 'Phone Number is required' })
+    .refine(
+      (value) => {
+        // You can adjust the regex pattern as per your requirements for phone number validation
+        const phonePattern = /^[0-9()-]*$/
+        return phonePattern.test(value)
+      },
+      {
+        message: 'Invalid phone number format',
+      }
+    ),
   message: z.string().min(2, { message: 'Message must be at least 2 characters.' }),
 })
 
