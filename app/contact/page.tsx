@@ -10,7 +10,7 @@ import { Slide } from '@/components/Slide'
 export default function Page() {
   return (
     <Section>
-      <div className="container relative grid gap-4 lg:grid-cols-2">
+      <div className="container relative grid items-center gap-4 lg:grid-cols-2">
         <div className="absolute left-0 top-20 z-[-1] aspect-square w-[130px] rounded-full bg-secondary blur-[60px] lg:-right-32 lg:bottom-4 lg:left-auto lg:top-auto lg:w-[350px] lg:opacity-50" />
         <Slide delay={0.25}>
           <ContactInformation />

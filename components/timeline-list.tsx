@@ -1,3 +1,4 @@
+import { Slide } from './Slide'
 import TimelineListCard from './timeline-list-card'
 
 export type Timeline = {
@@ -15,7 +16,9 @@ export default function TimelineList({ list }: TimelineListProps) {
       <div className="absolute left-1 h-[85%] w-0.5 -translate-x-1/2 rounded-md bg-primary md:left-1/2 md:translate-y-[-25px] maxMd:hidden"></div>
 
       {list.map((timeline, index) => (
-        <TimelineListCard key={index} timeline={timeline} index={index} position={index % 2 === 0 ? 'left' : 'right'} />
+        <Slide delay={0.25} key={index}>
+          <TimelineListCard timeline={timeline} index={index} position={index % 2 === 0 ? 'left' : 'right'} />
+        </Slide>
       ))}
     </div>
   )

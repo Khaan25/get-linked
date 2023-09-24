@@ -1,17 +1,17 @@
 export type SiteConfig = typeof siteConfig
 
-const siteURL = 'stevee.vercel.app'
-const name = 'Steve Denkinger'
+const siteURL = 'https://get-linked-zia.vercel.app'
+const name = 'GetLinked'
 
 export const siteConfig = {
   name,
-  description: 'This a painting of retired baseball players. Click on the faces to see more information.',
+  description:
+    'Step into a world of endless possibilities at Getlinked , An AI powered platform dedicated to connecting exceptional talents with forward-thinking employers, creating a harmonious synergy that breeds success.',
   url: siteURL,
-  manifestFile: `${siteURL}/site.webmanifest`,
   ogImage: {
     image: `${siteURL}/og.png`,
     width: 1800,
     height: 945,
   },
-  keywords: [name, 'Base ball', 'Team', 'Player'],
+  keywords: [name, 'AI', 'Solutions', 'link', 'network'],
 }

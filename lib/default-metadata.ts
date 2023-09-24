@@ -15,27 +15,14 @@ export const defaultMetadata: Metadata = {
   creator: siteConfig.name,
   publisher: siteConfig.name,
   robots: 'index, follow',
-  alternates: {
-    canonical: siteConfig.url,
-    languages: {
-      en: siteConfig.url,
-    },
-  },
   keywords: siteConfig.keywords,
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: 'white' },
     { media: '(prefers-color-scheme: dark)', color: '#09090b' },
   ],
-  category: 'Technology',
-  appleWebApp: {
-    title: siteConfig.name,
-    statusBarStyle: 'black-translucent',
-    startupImage: '/mstile-144x144.png',
-  },
   icons: {
     icon: [{ url: '/favicon.ico' }],
   },
-  // manifest: siteConfig.manifestFile,
   openGraph: {
     type: 'website',
     locale: 'en_US',

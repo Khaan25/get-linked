@@ -32,7 +32,7 @@ export const Slide = ({ children, className, delay }: props) => {
       transition={{
         ease: 'linear',
         delay: delay,
-        duration: 0.2,
+        duration: 0.5,
       }}
       className={className}
     >

@@ -13,6 +13,7 @@ import { fontClash, fontMontserrat, fontUnicaOne } from '@/lib/font'
 import Footer from '@/components/common/footer'
 import Header from '@/components/common/header'
 import SkipToMain from '@/components/common/skip-to-main'
+import ScrollUp from '@/components/scroll-up'
 
 export const metadata: Metadata = {
   ...defaultMetadata,
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Header />
         <main id={skipToContentID}>{children}</main>
         <Footer />
+        <ScrollUp />
         <Toaster />
       </body>
     </html>
