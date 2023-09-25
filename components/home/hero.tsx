@@ -22,9 +22,7 @@ export default function Hero() {
           defaultFont
           className="absolute -top-8 left-1/2 z-50 flex w-fit -translate-x-1/2 -translate-y-1/2 items-center gap-1 whitespace-nowrap text-center text-base italic md:-top-20 md:left-[78%] md:gap-2 lg:text-3xl"
         >
-          <Slide delay={0.3}>
-            Igniting a Revolution in HR <Underline>Innovation</Underline>
-          </Slide>
+          Igniting a Revolution in HR <Underline>Innovation</Underline>
         </Heading>
         <Star className="-top-8 left-20" />
         <Star dim className="right-4 top-0" />
